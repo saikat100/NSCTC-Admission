@@ -154,6 +154,7 @@ a.active {
 	font-weight: 500;
 	background-color: #3352f2;
 	margin-bottom: 3px;
+    cursor: pointer;
 }
 .amount {
 	display: flex;
