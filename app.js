@@ -22,9 +22,9 @@ document.querySelector(".book-now").addEventListener("click", function () {
 	const session = document.querySelector(".session").value;
     const adFee = document.querySelector(".ad-fee").value;
 
-	if (adFee !=5500) {
+	if (adFee !=550) {
 		document.querySelector(".warning").textContent =
-			"⚠ Admission Fee must be Enter 5500 tk 😣";
+			"⚠ Admission Fee must be Enter 550 tk 😣";
 	} else {
 		document.querySelector(".booking-form").style.display = "none";
 		document.querySelector(".booking-details").style.display = "block";

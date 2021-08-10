@@ -154,7 +154,7 @@ a.active {
 	font-weight: 500;
 	background-color: #3352f2;
 	margin-bottom: 3px;
-    cursor: pointer;
+	cursor: pointer;
 }
 .amount {
 	display: flex;
@@ -199,7 +199,7 @@ table {
 
 .table td,
 .table th {
-	padding: 0.75rem;
+	padding: 0.2rem;
 	vertical-align: top;
 }
 
@@ -229,14 +229,8 @@ table {
 }
 
 /* last updated */
-/* body{
-    border: 3px dotted rgb(71, 10, 238);
-    width: 100%;
-    margin: 10px;
-    padding: 30px;
-} */
+
 form {
-	/* margin: 200px auto 0 auto; */
 	display: flex;
 	flex-direction: column;
 }
@@ -262,12 +256,17 @@ form {
 	margin: 0 auto;
 	width: 100px;
 }
+#center img {
+	width: 70px !important;
+	height: 70px !important;
+}
 
 #first_part {
 	display: flex;
 }
 #logo {
 	left: 40%;
+	width: 10px;
 }
 #photo {
 	left: 80%;
@@ -276,9 +275,7 @@ form {
 	text-align: center;
 }
 .heading {
-	/* background-color: red;  */
-	/* background-image: linear-gradient(red, yellow); */
-	font-size: 70px;
+	font-size: 30px;
 }
 .heading_two {
 	color: rgb(0, 217, 255);
@@ -309,13 +306,10 @@ form {
 	transform: translateY(-50%);
 }
 #button {
-	font-size: 30px;
+	font-size: 20px;
 	background-image: linear-gradient(red, yellow);
 	margin: 2px;
 	padding: 2px;
-}
-#button-fee {
-	font-size: 30px;
 }
 
 .block {
@@ -324,7 +318,7 @@ form {
 	border: none;
 	background-image: linear-gradient(tomato, yellow);
 	color: black;
-	padding: 14px 28px;
+	padding: 5px 10px;
 	font-size: 16px;
 	cursor: pointer;
 	text-align: center;
@@ -338,10 +332,9 @@ input {
 	padding: 0 10px;
 	border-radius: 4px;
 }
-h4 {
-	padding: 10px;
-	margin: 10px;
-	border: 1px solid black;
+h5 {
+	padding: 5px;
+	margin: 5px;
 }
 #tk {
 	display: flex;
@@ -352,10 +345,9 @@ h4 {
 }
 
 .gradient-subtext {
- color: darkblue;
+	color: darkblue;
 }
 .gradient-text {
-	font-size: 4.2em;
 	font-weight: bold;
 	text-align: center;
 	color: darkblue;
