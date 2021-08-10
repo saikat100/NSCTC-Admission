@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Booking</title>
+    <title>Admission Form</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
@@ -20,7 +20,7 @@
     <div>
         <div class="booking-form">
             <p class="warning"></p>
-            <h3>Booking Flights</h3>
+            <h3>Admission Form</h3>
             <div>
                 <div class="input-group">
                     <label for="">Serial number:</label>
@@ -30,15 +30,86 @@
                     <label for="">Student Neme:</label>
                     <input class="name inp-style w-100" type="text" placeholder="Enter Student Neme">
                 </div>
-            </div>
-            <div class="inputs">
                 <div class="input-group">
-                    <label" for="">Departure</label>
-                        <input class="flying-departure inp-style w-100" type="date" name="">
+                    <label for="">Father's Neme:</label>
+                    <input class="f-name inp-style w-100" type="text" placeholder="Enter Father's Neme">
                 </div>
                 <div class="input-group">
-                    <label for="">Return(Optional)</label>
-                    <input class="flying-return inp-style w-100" type="date" name="">
+                    <label for="">Mother's Neme:</label>
+                    <input class="m-name inp-style w-100" type="text" placeholder="Enter Mother's Neme">
+                </div>
+                <div class="input-group">
+                    <label" for="">Date of Birth:</label>
+                        <input class="dob inp-style w-100" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Village:</label>
+                    <input class="v-name inp-style w-100" type="text" placeholder="Enter Village">
+                </div>
+                <div class="input-group">
+                    <label for="">Post Office:</label>
+                    <input class="p-o inp-style w-100" type="text" placeholder="Enter Post Office">
+                </div>
+                <div class="input-group">
+                    <label for="">Thana:</label>
+                    <input class="th-name inp-style w-100" type="text" placeholder="Enter Thana">
+                </div>
+                <div class="input-group">
+                    <label for="">District:</label>
+                    <input class="dis-name inp-style w-100" type="text" placeholder="Enter District">
+                </div>
+                <div class="input-group">
+                    <label for="">NID Number(Optional):</label>
+                    <input class="nid inp-style w-100" type="text" placeholder="Enter NID Number">
+                </div>
+                <div class="input-group">
+                    <label for="">class Roll No:</label>
+                    <input class="roll inp-style w-100" type="text" placeholder="Enter Roll Number">
+                </div>
+                <div class="input-group">
+                    <label for="">Reg No:</label>
+                    <input class="reg inp-style w-100" type="text" placeholder="Enter Reg Number">
+                </div>
+                <div class="input-group">
+                    <label for="">Student's Mobile Number:</label>
+                    <input class="mobile inp-style w-100" type="text" placeholder="Enter Student's Mobile Number">
+                </div>
+                <div class="input-group">
+                    <label for="">Parent's Mobile Number:</label>
+                    <input class="p-mobile inp-style w-100" type="text" placeholder="Enter Parent's Mobile Number">
+                </div>
+                <div class="input-group">
+                    <label for="">Email Address(Optional):</label>
+                    <input class="email inp-style w-100" type="text" placeholder="Enter Email Address">
+                </div>
+                <div class="input-group">
+                    <label for="">Select Course:</label>
+                    <select name="course" class="course">
+                        <option value="Computer Office Application">Computer Office Application</option>
+                        <option value="Graphic Design Multimidia">Graphic Design Multimidia</option>
+                        <option value="Database Program">Database Program</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="">Select Session:</label>
+                    <select name="session" class="session">
+                        <option value="January-june 2021">January-june 2021</option>
+                        <option value="April-june 2021">April-june 2021</option>
+                        <option value="July-December 2021">July-December 2021</option>
+                        <option value="October— December 2021">October— December 2021</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="">Admission Fee:</label>
+                    <input class="ad-fee inp-style w-100" type="text" name="" placeholder="Enter Admission Fee">
+                </div>
+                <!-- <div class="input-group">
+                    <label for="">Admission Fee(5500 tk):</label>
+                    <input class="admission-fee inp-style w-100" type="text" placeholder="Enter Admission Fee">
+                </div> -->
+                <div class="input-group">
+                    <label" for="">Admission Date:</label>
+                        <input class="issued-date inp-style w-100" type="date" name="">
                 </div>
             </div>
 
@@ -80,14 +151,17 @@
                 <h2 class="nsctc heading_four">
                     Namuri, Aditmari, Lalmonirhat
                 </h2>
-                <button id="button">Admission Form</button>
+                <br>
+                <button id="button" class="gradient-text">Admission Form</button>
                 <br>
                 <br>
-                <h2 class="nsctc">
-                    Session: <span id="result-session" />
-                </h2>
+                <div id="tk">
+                    <h1> Admission Fee: <span class="user-ad-fee" />
+                    </h1>
+                    <h1 id="tk-style">Tk</h1>
+                </div>
             </header>
-            <button class="block">PERSONAL INFORMATION</button>
+            <button class="block gradient-subtext">PERSONAL INFORMATION</button>
             <table class="table table-bordered">
                 <tbody>
                     <tr>
@@ -95,58 +169,83 @@
                         <td class="user-name"></td>
                     </tr>
                     <tr>
-                        <td class="strong">Departure</td>
-                        <td class="user-departure-date"></td>
+                        <td class="strong">Father's Name:</td>
+                        <td class="user-f-name"></td>
                     </tr>
-
                     <tr>
-                        <td class="strong">Return</td>
-                        <td class="user-return-date"></td>
+                        <td class="strong">Mother's Name:</td>
+                        <td class="user-m-name"></td>
                     </tr>
-
-
+                    <tr>
+                        <td class="strong">Date of Birth:</td>
+                        <td class="user-dob"></td>
+                    </tr>
+                    <tr>
+                        <td class="strong">Village:</td>
+                        <td class="user-v-name"></td>
+                    </tr>
+                    <tr>
+                        <td class="strong">Post Office:</td>
+                        <td class="user-p-o"></td>
+                    </tr>
+                    <tr>
+                        <td class="strong">Thana:</td>
+                        <td class="user-th-name"></td>
+                    </tr>
+                    <tr>
+                        <td class="strong">District:</td>
+                        <td class="user-dis-name"></td>
+                    </tr>
+                    <tr>
+                        <td class="strong">NID Number:</td>
+                        <td class="user-nid"></td>
+                    </tr>
+                    <tr>
+                        <td class="strong">Class Roll No:</td>
+                        <td class="user-roll"></td>
+                    </tr>
+                    <tr>
+                        <td class="strong">Reg No:</td>
+                        <td class="user-reg"></td>
+                    </tr>
                 </tbody>
             </table>
-            <button class="block">PERSONAL INFORMATION</button>
+            <button class="block gradient-subtext">YOUR ENROLLED COURSE</button>
             <table class="table table-bordered">
                 <tbody>
                     <tr>
-                        <td class="strong">Name:</td>
-                        <td class="user-name"></td>
+                        <td class="strong">Your Course:</td>
+                        <td class="user-course"></td>
                     </tr>
                     <tr>
-                        <td class="strong">Departure</td>
-                        <td class="user-departure-date"></td>
+                        <td class="strong">Session:</td>
+                        <td class="user-session"></td>
                     </tr>
-            
-                    <tr>
-                        <td class="strong">Return</td>
-                        <td class="user-return-date"></td>
-                    </tr>
-            
-            
                 </tbody>
             </table>
-            <button class="block">YOUR ENROLLED COURSE</button>
+            <button class="block gradient-subtext">CONTACT INFORMATION</button>
             <table class="table table-bordered">
                 <tbody>
                     <tr>
-                        <td class="strong">Name:</td>
-                        <td class="user-name"></td>
+                        <td class="strong">Student's Mobile Number:</td>
+                        <td class="user-mobile"></td>
                     </tr>
                     <tr>
-                        <td class="strong">Departure</td>
-                        <td class="user-departure-date"></td>
+                        <td class="strong">Parent's Mobile Number:</td>
+                        <td class="user-p-mobile"></td>
                     </tr>
-            
                     <tr>
-                        <td class="strong">Return</td>
-                        <td class="user-return-date"></td>
+                        <td class="strong">Email Address:</td>
+                        <td class="user-email"></td>
                     </tr>
-            
-            
+                    <tr>
+                        <td class="strong">Admission Date:</td>
+                        <td class="user-issued-date"></td>
+                    </tr>
                 </tbody>
             </table>
+            <br>
+            <br>
             <div id="container">
                 <div id="left">
                     <h3>

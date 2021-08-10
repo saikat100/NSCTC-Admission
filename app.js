@@ -1,59 +1,51 @@
-'use strict';
-
-const firstClassMinusBtn = document.querySelector('.first-class-minus');
-const firstClassPlusBtn = document.querySelector('.first-class-plus');
-const economyMinusBtn = document.querySelector('.economy-minus');
-const economyPlusBtn = document.querySelector('.economy-plus');
-
-// Increse Spinner
-function increaseSpinner(itemPlus) {
-    itemPlus.value++;
-    itemPlus.value * 150;
-}
-// Decrease Spinner
-function decreaseSpinner(itemMinus) {
-    let decValue = Number(itemMinus.value);
-
-    if (!decValue || decValue < 0) {
-        itemMinus.classList.add('error');
-    } else {
-        itemMinus.value--;
-        itemMinus.value * 150;
-    }
-}
-
-//Total Price Count
-function grandTotal() {
-    let subTotal = (document.querySelector('.subtotal').textContent = getFirstClassPrice + getEconomyPrice);
-    let userSubTotal = (document.querySelector('.user-subtotal').textContent = subTotal);
-    let vat = (document.querySelector('.vat').textContent = Math.round(subTotal * 0.1));
-    let userVat = (document.querySelector('.user-vat').textContent = vat);
-    let total = (document.querySelector('.total').textContent = subTotal + vat);
-    let userTotal = (document.querySelector('.user-total').textContent = total);
-}
+"use strict";
 
 // Booking conform block
-document.querySelector('.book-now').addEventListener('click', function () {
-    const slNo = document.querySelector('.sl-no').value;
-    const sName = document.querySelector('.name').value;
-    const fryingDeparture = document.querySelector('.flying-departure').value;
-    const fryingReturn = document.querySelector('.flying-return').value;
+document.querySelector(".book-now").addEventListener("click", function () {
+	const slNo = document.querySelector(".sl-no").value;
+	const sName = document.querySelector(".name").value;
+	const fName = document.querySelector(".f-name").value;
+	const mName = document.querySelector(".m-name").value;
+	const dob = document.querySelector(".dob").value;
+	const vName = document.querySelector(".v-name").value;
+	const poName = document.querySelector(".p-o").value;
+	const thName = document.querySelector(".th-name").value;
+	const disName = document.querySelector(".dis-name").value;
+	const nid = document.querySelector(".nid").value;
+	const roll = document.querySelector(".roll").value;
+	const reg = document.querySelector(".reg").value;
+	const mobile = document.querySelector(".mobile").value;
+	const pMobile = document.querySelector(".p-mobile").value;
+	const email = document.querySelector(".email").value;
+	const admissionDate = document.querySelector(".issued-date").value;
+	const course = document.querySelector(".course").value;
+	const session = document.querySelector(".session").value;
+    const adFee = document.querySelector(".ad-fee").value;
 
-    if (!slNo) {
-        document.querySelector('.warning').textContent = '⚠ Please fill required fields 😣';
-    }
-    else {
-        document.querySelector(".booking-form").style.display = "none";
-        document.querySelector(".booking-details").style.display = "block";
-        document.querySelector(".user-sl-no").textContent = slNo;
-        document.querySelector(".user-name").textContent = sName;
-        document.querySelector(".user-departure-date").textContent = fryingDeparture;
-        if (fryingReturn === "") {
-			document.querySelector(".user-return-date").textContent = "No Return Ticket";
-			} 
-        else {
-			document.querySelector(".user-return-date").textContent = fryingReturn;
-		} 
-        grandTotal();
+	if (adFee !=5500) {
+		document.querySelector(".warning").textContent =
+			"⚠ Admission Fee must be Enter 5500 tk 😣";
+	} else {
+		document.querySelector(".booking-form").style.display = "none";
+		document.querySelector(".booking-details").style.display = "block";
+		document.querySelector(".user-sl-no").textContent = slNo;
+		document.querySelector(".user-name").textContent = sName;
+		document.querySelector(".user-f-name").textContent = fName;
+		document.querySelector(".user-m-name").textContent = mName;
+		document.querySelector(".user-dob").textContent = dob;
+		document.querySelector(".user-v-name").textContent = vName;
+		document.querySelector(".user-p-o").textContent = poName;
+		document.querySelector(".user-th-name").textContent = thName;
+		document.querySelector(".user-dis-name").textContent = disName;
+		document.querySelector(".user-nid").textContent = nid;
+		document.querySelector(".user-roll").textContent = roll;
+		document.querySelector(".user-reg").textContent = reg;
+		document.querySelector(".user-mobile").textContent = mobile;
+		document.querySelector(".user-p-mobile").textContent = pMobile;
+		document.querySelector(".user-email").textContent = email;
+		document.querySelector(".user-issued-date").textContent = admissionDate;
+		document.querySelector(".user-course").textContent = course;
+		document.querySelector(".user-session").textContent = session;
+		document.querySelector(".user-ad-fee").textContent = adFee;
 	}
 });
