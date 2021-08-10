@@ -107,6 +107,10 @@
                     <label" for="">Admission Date:</label>
                         <input class="issued-date inp-style w-100" type="date" name="">
                 </div>
+                <div class="input-group">
+                    <label" for="">Image:</label>
+                        <input type='file' />
+                </div>
             </div>
 
             <button class="btn-style book-now">Submit</button>
@@ -123,7 +127,7 @@
                     </div>
                     <div id="right">
                         <h5 id="photo">
-                            <button onclick="window.print()">Photo 🖨️</button>
+                            <img id="myImg" src="#">
                         </h5>
                     </div>
                     <div id="center">
@@ -252,7 +256,10 @@
             </div>
             <button class="block gradient-subtext">Md.Ashaduzzaman Mob:01717193363. E-mail : Nsctc2019@Gmail.com,
                 Web:www.Nsctc.com</button>
-            <button class="btn-style book-now"><a href="" style="color: #fff;"> ⬅️ Back To Home</a></button>
+            <div style="display: flex;">
+                <button class="btn-style-last book-now"><a href="" style="color: #fff;"> ⬅️ Back To Home</a></button>
+                <button class="btn-style-last" onclick="window.print()">Print 🖨️</button>
+            </div>
         </div>
     </div>
 
