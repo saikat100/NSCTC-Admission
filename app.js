@@ -35,6 +35,7 @@ document.querySelector(".book-now").addEventListener("click", function () {
 	const admissionDate = document.querySelector(".issued-date").value;
 	const course = document.querySelector(".course").value;
 	const session = document.querySelector(".session").value;
+	const year = document.querySelector(".year").value;
     const adFee = document.querySelector(".ad-fee").value;
 
 	if (adFee !=550) {
@@ -61,6 +62,7 @@ document.querySelector(".book-now").addEventListener("click", function () {
 		document.querySelector(".user-issued-date").textContent = admissionDate;
 		document.querySelector(".user-course").textContent = course;
 		document.querySelector(".user-session").textContent = session;
+		document.querySelector(".user-year").textContent = year;
 		document.querySelector(".user-ad-fee").textContent = adFee;
 	}
 });
